@@ -121,6 +121,7 @@ const ChatScreen = ({ chatQuery }) => {
         {messages.map((message) => {
           return (
             <Message
+              key={message.id}
               user={message.data().user}
               message={{
                 ...message.data(),
@@ -186,8 +187,7 @@ const HeaderInformation = styled.div`
 `;
 
 const EndOfMessage = styled.div`
-margin-bottom: 50px;
-
+  margin-bottom: 50px;
 `;
 
 const HeaderIcon = styled.div``;
