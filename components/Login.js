@@ -8,7 +8,7 @@ import { auth, provider } from "../firebase";
 
 const Login = () => {
   const signIn = () => {
-    signInWithPopup(auth, provider).catch(alert());
+    signInWithPopup(auth, provider).catch((err) => alert(err));
   };
 
   return (
